@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Data
 @Accessors(chain = true)
@@ -31,7 +32,7 @@ public class CommonResponse<T> {
         }
 
         default List<String> allMessage() {
-            return Arrays.stream(values()).map(i -> i.message).toList();
+            return Arrays.stream(values()).map(i -> i.message).collect(Collectors.toList());
         }
     }
 
