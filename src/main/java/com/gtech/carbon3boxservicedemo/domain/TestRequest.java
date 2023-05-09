@@ -1,8 +1,8 @@
 package com.gtech.carbon3boxservicedemo.domain;
 
-import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 import lombok.experimental.Accessors;
+import javax.validation.constraints.NotBlank;
 
 @Data
 @Accessors(chain = true)
